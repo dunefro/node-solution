@@ -348,6 +348,7 @@ Rolling update in kubernetes to deploy v2 tag
 kubectl -n kube-public set image deploy/node-deployment node=gcr.io/zippy-catwalk-336307/ved-node:v2 --record
 deployment.apps/node-deployment image updated
 ```
+```
 $ kubectl get pods -n kube-public -o custom-columns=NAME:.metadata.name,IMAGE:.spec.containers[0].image
 NAME                               IMAGE
 node-deployment-6f8d899d8f-hwfw6   gcr.io/zippy-catwalk-336307/ved-node:v2
