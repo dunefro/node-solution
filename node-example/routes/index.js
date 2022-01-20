@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
   res.send({
     hostname: os.hostname(),
     version: process.env.npm_package_version,
+    hello: "world"
   });
 });
 
